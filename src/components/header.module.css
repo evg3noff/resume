@@ -1,0 +1,120 @@
+.Header_logo{
+    font-size: 40px;
+    font-family: 'Gotham Pro';
+    font-weight: 400;
+    color: white;
+}
+.Header_logo_color{
+    color: #FC6D26;
+}
+.Header{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    flex-direction: column;
+}
+.Header_menu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 67px;
+    align-items: center;
+    margin-right: 45px;
+}
+.Header_menu_navigation{
+    color: white;
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    list-style: none;
+}
+.ul_Header{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.Header_top_showcase{
+    background-color: white;
+    height: 154px;
+    max-width: 540px;
+    width: 100%;
+    border-radius: 25px 55px 25px 25px;
+    margin-top: 49px;
+}
+
+.Header_showcase_body{
+    width: 100%;
+    border-radius: 0px 55px 55px 55px;
+    height: 883px;
+    background-color: white;
+    margin-top: 29px;
+    display: flex;
+    
+}
+.Header_wrapper_for_position_content{
+    display: flex;
+}
+.Header_stub_background{
+    background-color: white;
+    width: 100%;
+    max-width: 581px;
+    height: 154px;
+    border-radius: 25px 55px 0 0;
+    position: absolute;
+    z-index: -2;
+    margin-top: 49px;
+}
+.Header_showcase_title_content{
+    display: flex;
+    flex-direction: column;
+}
+.Header_showcase_title_mainText{
+    font-weight: 700;
+    font-size: 64px;
+    color: #000;
+    font-family: 'Gotham Pro';
+    margin-top: 137px;
+    margin-left: 81px;
+}
+.Header_showcase_title_subText{
+    font-weight: 400;
+    font-size: 64px;
+    letter-spacing: -0.05em;
+    color: #000;
+    font-family: 'Gotham Pro';
+    margin-left: 81px;
+    margin-top: 10px;
+}
+.Header_showcase_title_portrait{
+    border-radius: 26px;
+    width: 436px;
+    height: 652px;
+    background-color: #aaa9a9;
+    margin-top: 73px;
+    margin-left: 69px;
+}
+.Header_showcase_title_carousel_points{
+    gap: 38px;
+    display: flex;
+    margin-top: 144px;
+    margin-left: 156px;
+}
+.Header_showcase_title_carousel_point{
+    width: 31px;
+    height: 31px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+.Header_showcase_title_carousel_point_active{
+    background-color: #000;
+}
+.Header_showcase_title_descriptionTxt{
+    font-weight: 400;
+    font-size: 19px;
+    color: #000;
+    font-family: 'Gotham Pro';
+    max-width: 572px;
+    margin-top: 91px;
+    margin-left: 81px;
+}
