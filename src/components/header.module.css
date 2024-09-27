@@ -28,6 +28,7 @@
     font-family: 'Gotham Pro';
     font-weight: 700;
     list-style: none;
+    cursor: pointer;
 }
 .ul_Header{
     display: flex;
@@ -50,7 +51,7 @@
     background-color: white;
     margin-top: 29px;
     display: flex;
-    
+    flex-direction: column;
 }
 .Header_wrapper_for_position_content{
     display: flex;
@@ -105,6 +106,7 @@
     height: 31px;
     border: 1px solid black;
     border-radius: 100px;
+    cursor: pointer;
 }
 .Header_showcase_title_carousel_point_active{
     background-color: #000;
@@ -117,4 +119,27 @@
     max-width: 572px;
     margin-top: 91px;
     margin-left: 81px;
+}
+.Header_main_container{
+    display: flex;
+}
+.Header_wrapper_for_info{
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 93px;
+    justify-content: space-around;
+}
+.Header_wrapper_for_info_component{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+.Header_wrapper_for_info_txt{
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Gotham Pro';
+}
+.Header_custom_url{
+    text-decoration: none;
+    color: #000;
 }
