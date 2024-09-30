@@ -3,6 +3,8 @@
 }
 body{
   background-color: black;
+  background-image: url('assets/bg.png');
+  background-size: cover;
 }
 .bg{
   width: auto;
@@ -14,4 +16,7 @@ body{
 }
 .showcase{
   margin-top: 29px;
+}
+.Content{
+  margin-top: 150px;
 }

@@ -133,6 +133,7 @@
     display: flex;
     gap: 10px;
     cursor: pointer;
+    align-items: center;
 }
 .Header_wrapper_for_info_txt{
     font-weight: 700;

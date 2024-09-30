@@ -1,0 +1,31 @@
+.iconBlock_body{
+    width: 249px;
+    height: 308px;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+    cursor: pointer;
+}
+.iconBlock_body_wrapper_icon{
+    width: 162px;
+    height: 162px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+.iconBlock_body_text{
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    font-family: 'Gotham Pro';
+    max-width: 162px;
+    margin-bottom: 10px;
+    height: 85px;
+}
+.iconBlock_body_wrapper_icon_img{
+    object-fit: contain;
+}

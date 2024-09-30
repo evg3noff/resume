@@ -1,0 +1,67 @@
+.Main_menu_body{
+    display: flex;
+    border-radius: 20px;
+    width: 1440px;
+    height: auto;
+    background-color: white;
+    margin-top: 117px;
+    justify-content: center;
+    transition: 0.5s;
+}
+.Main_menu_text_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.Main_menu_text_wrapper_education{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 58px;
+    margin-left: 39px;
+    margin-right: 126px;
+    margin-bottom: 45px;
+    gap: 15px;
+}
+.Main_menu_body_text{
+    font-weight: 500;
+    font-size: 40px;
+    color: #000;
+    font-family: 'Gotham Pro';
+    margin-left: 94px;
+    margin-right: 96px;
+    margin-top: 110px;
+    margin-bottom: 95px;
+}
+.Main_menu_text_wrapper_block{
+    color: #000;
+    font-family: 'Gotham Pro';
+}
+.Main_menu_text_wrapper_language{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 62px;
+    margin-left: 73px;
+    gap: 55px;
+}
+.MainBody_wrapper_for_icon_block{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-left: 44px;
+    margin-top: 78px;
+    margin-bottom: 78px;
+}
+.MainBody_wrapper_for_icon_block_column{
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+}
+.MainBody_wrapper_for_icon_block_advanced{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
