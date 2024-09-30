@@ -45,7 +45,7 @@ const MainBody = ({activeButton}) => {
                     </div>
                 </div>
                 <div className={styles.MainBody_wrapper_for_icon_block_advanced}>
-                    <AdvancedBlock textOption1='text' textOption2='text' textOption3='text' textOption4='text' type='1' value={10}/>
+                    <AdvancedBlock textOption1='text' textOption2='text' textOption3='text' textOption4='text' type='1' value={40}/>
                     <AdvancedBlock textOption1='text' textOption2='text' textOption3='text' textOption4='text' type='2'/>
                 </div>
             </div>

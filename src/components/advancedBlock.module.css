@@ -24,8 +24,21 @@
     height: 49px;
     border-radius: 65px;
     background-color: #45B2FF;
+    cursor: pointer;
 }
-.advancedBlock_body_wrapper_column_progress_filled:hover{
+:root{
+    --t1: all 0.5s ease 0s
+}
+.advancedBlock_body_wrapper_column_progress .advancedBlock_body_wrapper_column_progress_filled:hover{
     filter: brightness(1.2);
-    transition: 0.3s ease-out;
+    transition: var(--t1);
+    animation: start 1s ease 0s 2 alternate;
+}
+.advancedBlock_body_wrapper_column_progress .advancedBlock_body_wrapper_column_progress_filled::before{
+    content: '';
+    width: 0;
+    transition: width 1s ease;
+}
+.advancedBlock_body_wrapper_column_progress .advancedBlock_body_wrapper_column_progress_filled:hover::before{
+    width: 100%;
 }
