@@ -1,5 +1,6 @@
 import styles from "./advancedBlock.module.css"; 
 import React from 'react';
+import classNames from 'classnames';
 
 const AdvancedBlock = ({textOption1, textOption2, textOption3, textOption4, value1, value2, value3, value4, activeIcon, onClick, type}) => {
     if (activeIcon === 1){
@@ -78,7 +79,7 @@ const AdvancedBlock = ({textOption1, textOption2, textOption3, textOption4, valu
         </div>
         <div className={styles.advancedBlock_body_wrapper_column}>
             <div className={styles.advancedBlock_body_wrapper_column_progress}>
-                <div style={{ width:`${value1}%`}} className={styles.advancedBlock_body_wrapper_column_progress_filled}></div>
+                <div style={{ width:`${value1}%`}} className={classNames(styles.advancedBlock_body_wrapper_column_progress_filled, styles.advancedBlock_body_wrapper_column_progress_filled_power_up)}></div>
             </div>
             <div className={styles.advancedBlock_body_wrapper_column_progress}>
                 <div style={{ width:`${value2}%`}} className={styles.advancedBlock_body_wrapper_column_progress_filled}></div>
