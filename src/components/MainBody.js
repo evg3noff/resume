@@ -1,5 +1,5 @@
 import styles from "./MainBody.module.css"; 
-import React from 'react';
+import React, { useState } from 'react';
 import IconBlock from "./IconBlock";
 import AdvancedBlock from "./AdvancedBlock";
 import image1 from '../assets/JS.png';
@@ -10,6 +10,7 @@ import image5 from '../assets/git.png';
 import image6 from '../assets/logos_webpack.png';
 
 const MainBody = ({activeButton}) => {
+    const [activeIcon, setActiveIcon] = useState(1);
     if (activeButton == null){
         return <>
         </>
@@ -30,13 +31,17 @@ const MainBody = ({activeButton}) => {
         </div>;
     }
     if (activeButton === 2){
+        
+        function handleIconClick(IconId){
+            setActiveIcon(IconId);
+        }
         return <div style={{justifyContent:'space-around'}} className={styles.Main_menu_body}>
             <div className={styles.MainBody_wrapper_for_icon_block}>
                 <div className={styles.MainBody_wrapper_for_icon_block_simple}>
                     <div className={styles.MainBody_wrapper_for_icon_block_column}>
-                        <IconBlock src={image1} alt={'logo JS'} linear='linear-gradient(135deg, #ffba25 0%, #f5de19 100%)' text='Code language'/>
-                        <IconBlock src={image2} alt={'logo html/css'} linear='linear-gradient(137deg, #3cc 0%, #dadbd4 100%)' text='HTML & CSS'/>
-                        <IconBlock src={image3} alt={'logo react'} linear='linear-gradient(135deg, rgba(0, 216, 255, 0.19) 0%, #d9d9d9 100%)' fontSizes='26px' text='Frameworks'/>
+                        <IconBlock onClick={() => handleIconClick(1)} onActive={activeIcon === 1} src={image1} alt={'logo JS'} linear='linear-gradient(135deg, #ffba25 0%, #f5de19 100%)' text='Code language'/>
+                        <IconBlock onClick={() => handleIconClick(2)} onActive={activeIcon === 2} src={image2} alt={'logo html/css'} linear='linear-gradient(137deg, #3cc 0%, #dadbd4 100%)' text='HTML & CSS'/>
+                        <IconBlock onClick={() => handleIconClick(3)} onActive={activeIcon === 3} src={image3} alt={'logo react'} linear='linear-gradient(135deg, rgba(0, 216, 255, 0.19) 0%, #d9d9d9 100%)' fontSizes='26px' text='Frameworks'/>
                     </div>
                     <div className={styles.MainBody_wrapper_for_icon_block_column}>
                         <IconBlock src={image4} alt={'logo vscode'} linear='linear-gradient(135deg, rgba(19, 112, 175, 0.67) 0%, rgba(55, 166, 242, 0.58) 100%)' fontSizes='24px' text='IDE and source-code editors'/>
@@ -45,7 +50,7 @@ const MainBody = ({activeButton}) => {
                     </div>
                 </div>
                 <div className={styles.MainBody_wrapper_for_icon_block_advanced}>
-                    <AdvancedBlock textOption1='text' textOption2='text' textOption3='text' textOption4='text' type='1' value={40}/>
+                    <AdvancedBlock activeIcon={activeIcon} />
                     <AdvancedBlock textOption1='text' textOption2='text' textOption3='text' textOption4='text' type='2'/>
                 </div>
             </div>

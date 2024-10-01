@@ -37,6 +37,7 @@
 .Main_menu_text_wrapper_block{
     color: #000;
     font-family: 'Gotham Pro';
+    cursor: pointer;
 }
 .Main_menu_text_wrapper_language{
     display: flex;
@@ -51,7 +52,7 @@
     justify-content: space-between;
     gap: 40px;
     margin-left: 44px;
-    margin-top: 78px;
+    margin-top: 88px;
     margin-bottom: 78px;
 }
 .MainBody_wrapper_for_icon_block_column{
@@ -62,6 +63,5 @@
 .MainBody_wrapper_for_icon_block_advanced{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 30px;
 }

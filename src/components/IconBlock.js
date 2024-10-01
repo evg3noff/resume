@@ -8,7 +8,7 @@ const IconBlock = ({text, src, alt, onActive, onClick, fontSizes, linear}) => {
     const backgroundColor = {
         background: linear
     };
-    return <div className={styles.iconBlock_body}>
+    return <div onClick={onClick} className={styles.iconBlock_body}>
                 <div style={backgroundColor} className={styles.iconBlock_body_wrapper_icon}>
                     <img className={styles.iconBlock_body_wrapper_icon_img} src={src} alt={alt}/>
                 </div>

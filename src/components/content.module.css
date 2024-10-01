@@ -28,14 +28,6 @@
     color: #131313;
     font-family: 'Gotham Pro';
 }
-.Content_menu_body{
-    display: flex;
-    border-radius: 20px;
-    width: 1440px;
-    height: 813px;
-    background-color: white;
-    margin-top: 117px;
-}
 .Content_menu_option_activeMenu{
     margin-top: -49px;
     display: none;
