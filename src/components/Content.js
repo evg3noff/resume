@@ -4,20 +4,17 @@ import React, { useState } from 'react';
 import CustomButtons from "./CustomButtons";
 import MainBody from "./MainBody";
 
-function Content() {
-    //const [currentContent, setCurrentContent] = useState(defaultContent);
-    const [activeButton, switchActiveButton] = useState(null);
+const Content = ({activeButton, onButtonClick}) => {
     function handleMenuClick(buttonId) {
-        switchActiveButton(buttonId);
-        //setCurrentContent("жопа");
+        onButtonClick(buttonId);
     }
     return (
         <div className = {styles.Content}>
             <div className = {styles.Content_menu_wrapper}>
-                <CustomButtons text="About Me" onClick={() => handleMenuClick(1)} onActive={activeButton === 1}/>
-                <CustomButtons text="Hard-Skill" onClick={() => handleMenuClick(2)} onActive={activeButton === 2} />
-                <CustomButtons text="Education" onClick={() => handleMenuClick(3)} onActive={activeButton === 3} />
-                <CustomButtons text="Language" onClick={() => handleMenuClick(4)} onActive={activeButton === 4}/>
+                <CustomButtons BtnId={1} onButtonClick={() => handleMenuClick(1)} id='Aboutme' text="About Me"  onActive={activeButton === 1}/>
+                <CustomButtons BtnId={2} onButtonClick={() => handleMenuClick(2)} id='Hardskill' text="Hard-Skill"  onActive={activeButton === 2} />
+                <CustomButtons BtnId={3} onButtonClick={() => handleMenuClick(3)} id='Education' text="Education"  onActive={activeButton === 3} />
+                <CustomButtons BtnId={4} onButtonClick={() => handleMenuClick(4)} id='Languages' text="Languages"  onActive={activeButton === 4}/>
             </div>
             <MainBody activeButton={activeButton}/>
         </div>

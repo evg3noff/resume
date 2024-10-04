@@ -3,6 +3,7 @@
     font-family: 'Gotham Pro';
     font-weight: 400;
     color: white;
+    cursor: pointer;
 }
 .Header_logo_color{
     color: #FC6D26;
@@ -94,6 +95,7 @@
     background-color: #aaa9a9;
     margin-top: 73px;
     margin-left: 69px;
+    transition: 0.5s;
 }
 .Header_showcase_title_carousel_points{
     gap: 38px;
@@ -107,18 +109,56 @@
     border: 1px solid black;
     border-radius: 100px;
     cursor: pointer;
+    transition: 0.5s;
 }
 .Header_showcase_title_carousel_point_active{
     background-color: #000;
+    transition: 0.5s;
 }
 .Header_showcase_title_descriptionTxt{
+    max-width: 572px;
+    margin-top: 91px;
+    margin-left: 81px;
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.Header_showcase_title_descriptionTxt span:nth-child(odd){
+    position: relative;
     font-weight: 400;
     font-size: 19px;
     color: #000;
     font-family: 'Gotham Pro';
-    max-width: 572px;
-    margin-top: 91px;
-    margin-left: 81px;
+    white-space: nowrap;
+}
+.Header_showcase_title_descriptionTxt span:nth-child(even){
+    position: relative;
+    font-weight: 400;
+    font-size: 19px;
+    color: #000;
+    font-family: 'Gotham Pro';
+
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+@keyframes textMoveRight {
+    from{
+      margin-left: -100%;
+    }
+    
+    to{
+        margin-left: 100%;
+    }
+}
+@keyframes textMoveLeft {
+    from{
+      margin-left: 700px;
+    }
+    
+    to{
+        margin-left: -500px;
+    }
 }
 .Header_main_container{
     display: flex;
@@ -143,4 +183,11 @@
 .Header_custom_url{
     text-decoration: none;
     color: #000;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #aaa9a9;
 }

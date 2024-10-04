@@ -63,5 +63,6 @@
 .MainBody_wrapper_for_icon_block_advanced{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
 }

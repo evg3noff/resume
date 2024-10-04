@@ -20,3 +20,8 @@ body{
 .Content{
   margin-top: 150px;
 } 
+hr{
+  max-width: 80%;
+  margin-top: 92px;
+  margin-bottom: 55px;
+}

@@ -1,17 +1,26 @@
 import styles from "./header.module.css"; 
 import classNames from 'classnames';
+import Content from "./Content.js";
+import React, { useState } from 'react';
+import Portrait from "./Portrait..js";
 
-const Header = () => (
+const Header = ({onAnchourClick}) => {
+	const [activePhoto, setAtivePhoto] = useState(1);
+	function handlePointClick(pointID){
+		console.log(pointID);
+		setAtivePhoto(pointID);
+	}
+	return (
 	<>
 		<div className = {styles.Header}>
 			<div className={styles.Header_wrapper_for_position_content}>
 				<div className = {styles.Header_menu}>
 					<span className = {styles.Header_logo}>EVGEN</span><span className = {classNames(styles.Header_logo_color, styles.Header_logo)}>OFF</span>
 					<ul className={styles.ul_Header}>
-						<li className={styles.Header_menu_navigation}>About-me</li>
-						<li className={styles.Header_menu_navigation}>Education</li>
-						<li className={styles.Header_menu_navigation}>Hard-skills</li>
-						<li className={styles.Header_menu_navigation}>Languages</li>
+						<li className={styles.Header_menu_navigation}><a onClick={(e) => { onAnchourClick(1);}} href='#Aboutme'>About-me</a></li>
+						<li className={styles.Header_menu_navigation}><a onClick={(e) => { onAnchourClick(2);}} href='#Hardskill'>Hard-skills</a></li>
+						<li className={styles.Header_menu_navigation}><a onClick={(e) => { onAnchourClick(3);}} href='#Education'>Education</a></li>
+						<li className={styles.Header_menu_navigation}><a onClick={(e) => { onAnchourClick(4);}} href='#Languages'>Languages</a></li>
 					</ul>
 				</div>
 				<div>
@@ -24,15 +33,22 @@ const Header = () => (
 						<div className = {styles.Header_showcase_title_mainText}>EVGENY-KLENIN</div>
 						<div className = {styles.Header_showcase_title_subText}>Junior front-end developer</div>
 						<div className = {styles.Header_showcase_title_carousel_points}>
-							<div className = {styles.Header_showcase_title_carousel_point}></div>
-							<div className = {classNames(styles.Header_showcase_title_carousel_point, styles.Header_showcase_title_carousel_point_active)}></div>
+							<div onClick={() => handlePointClick(1)} className = {activePhoto == 1 ? classNames(styles.Header_showcase_title_carousel_point, styles.Header_showcase_title_carousel_point_active) : styles.Header_showcase_title_carousel_point}></div>
+							<div onClick={() => handlePointClick(2)} className = {activePhoto == 2 ? classNames(styles.Header_showcase_title_carousel_point, styles.Header_showcase_title_carousel_point_active) : styles.Header_showcase_title_carousel_point}></div>
 						</div>
 						<div className = {styles.Header_showcase_title_descriptionTxt}>
-						JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  JUTST YOUR TEXT  
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
+							<span>JUTST YOUR TEXT  JUTST YOUR TEXT</span>
 						</div>
 					</div>
 					<div className = {styles.Header_showcase_title_content}>
-						<img className = {styles.Header_showcase_title_portrait}/>
+						<Portrait onPointClick={activePhoto}/>
 					</div>
 				</div>
 				<div className = {styles.Header_wrapper_for_info}>
@@ -58,6 +74,8 @@ const Header = () => (
 			</div>
 		</div>
 	</>
-);
+	);
+}
+
 
 export default Header;

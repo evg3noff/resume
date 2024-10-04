@@ -38,6 +38,7 @@
     display: flex;
     justify-content: center;
     margin-top: 32px;
+    user-select: none;  
 }
 .iconBlock_body_text{
     font-weight: 600;

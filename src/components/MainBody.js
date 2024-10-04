@@ -2,6 +2,7 @@ import styles from "./MainBody.module.css";
 import React, { useState } from 'react';
 import IconBlock from "./IconBlock";
 import AdvancedBlock from "./AdvancedBlock";
+import AdvancedBlockAlternative from "./AdvancedBlockAlternative";
 import image1 from '../assets/JS.png';
 import image2 from '../assets/html.png';
 import image3 from '../assets/react.png';
@@ -11,6 +12,7 @@ import image6 from '../assets/logos_webpack.png';
 
 const MainBody = ({activeButton}) => {
     const [activeIcon, setActiveIcon] = useState(1);
+    const [activeIconAlt, setActiveIconAlt] = useState(4);
     if (activeButton == null){
         return <>
         </>
@@ -35,6 +37,9 @@ const MainBody = ({activeButton}) => {
         function handleIconClick(IconId){
             setActiveIcon(IconId);
         }
+        function handleIconClickAlt(IconIdAlt){
+            setActiveIconAlt(IconIdAlt);
+        }
         return <div style={{justifyContent:'space-around'}} className={styles.Main_menu_body}>
             <div className={styles.MainBody_wrapper_for_icon_block}>
                 <div className={styles.MainBody_wrapper_for_icon_block_simple}>
@@ -44,14 +49,14 @@ const MainBody = ({activeButton}) => {
                         <IconBlock onClick={() => handleIconClick(3)} onActive={activeIcon === 3} src={image3} alt={'logo react'} linear='linear-gradient(135deg, rgba(0, 216, 255, 0.19) 0%, #d9d9d9 100%)' fontSizes='26px' text='Frameworks'/>
                     </div>
                     <div className={styles.MainBody_wrapper_for_icon_block_column}>
-                        <IconBlock src={image4} alt={'logo vscode'} linear='linear-gradient(135deg, rgba(19, 112, 175, 0.67) 0%, rgba(55, 166, 242, 0.58) 100%)' fontSizes='24px' text='IDE and source-code editors'/>
-                        <IconBlock src={image5} alt={'logo git'} linear='linear-gradient(135deg, rgba(255, 157, 108, 0.6) 0%, rgba(187, 78, 117, 0.8) 100%)' fontSizes='20px' text='Distributed version control system'/>
-                        <IconBlock src={image6} alt={'logo webpack'} linear='linear-gradient(135deg, #8ed6fb 0%, #1c78c0 100%)' fontSizes='30px' text='Module-bundlers'/>
+                        <IconBlock onClick={() => handleIconClickAlt(4)} onActive={activeIconAlt === 4} src={image4} alt={'logo vscode'} linear='linear-gradient(135deg, rgba(19, 112, 175, 0.67) 0%, rgba(55, 166, 242, 0.58) 100%)' fontSizes='24px' text='IDE and source-code editors'/>
+                        <IconBlock onClick={() => handleIconClickAlt(5)} onActive={activeIconAlt === 5} src={image5} alt={'logo git'} linear='linear-gradient(135deg, rgba(255, 157, 108, 0.6) 0%, rgba(187, 78, 117, 0.8) 100%)' fontSizes='20px' text='Distributed version control system'/>
+                        <IconBlock onClick={() => handleIconClickAlt(6)} onActive={activeIconAlt === 6} src={image6} alt={'logo webpack'} linear='linear-gradient(135deg, #8ed6fb 0%, #1c78c0 100%)' fontSizes='30px' text='Module-bundlers'/>
                     </div>
                 </div>
                 <div className={styles.MainBody_wrapper_for_icon_block_advanced}>
                     <AdvancedBlock activeIcon={activeIcon} />
-                    <AdvancedBlock textOption1='text' textOption2='text' textOption3='text' textOption4='text' type='2'/>
+                    <AdvancedBlockAlternative activeIconAlt={activeIconAlt} />
                 </div>
             </div>
         </div>
@@ -85,7 +90,7 @@ const MainBody = ({activeButton}) => {
                     2024-...
                 </span>
                 <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                <b>University</b>
+                <b>Courses</b>
                 </span>
                 <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
                     code.mu free Course «JavaScript/Front-end»

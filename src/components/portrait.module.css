@@ -1,0 +1,10 @@
+.Portrait{
+    border-radius: 26px;
+    width: 436px;
+    height: 652px;
+    background-color: #aaa9a9;
+    margin-top: 73px;
+    margin-left: 69px;
+    transition: 0.5s;
+    object-fit: contain;
+}
