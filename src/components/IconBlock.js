@@ -3,7 +3,7 @@ import React from 'react';
 
 const IconBlock = ({text, src, alt, onActive, onClick, fontSizes, linear}) => {
     const style = {
-        fontSize: fontSizes || '32px'
+        fontSize: fontSizes || 'clamp(20px, 2em, 2em)'
     };
     const backgroundColor = {
         background: linear
@@ -12,7 +12,7 @@ const IconBlock = ({text, src, alt, onActive, onClick, fontSizes, linear}) => {
                 <div style={backgroundColor} className={styles.iconBlock_body_wrapper_icon}>
                     <img className={styles.iconBlock_body_wrapper_icon_img} src={src} alt={alt}/>
                 </div>
-                <span style={style} className={styles.iconBlock_body_text}>{text}</span>
+                <span className={styles.iconBlock_body_text}>{text}</span>
     </div>
 };
 export default IconBlock;

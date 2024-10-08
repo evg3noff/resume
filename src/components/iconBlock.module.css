@@ -3,7 +3,6 @@
     height: 308px;
     border-radius: 19px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 19px;
@@ -33,7 +32,7 @@
 }
 .iconBlock_body_wrapper_icon{
     width: 162px;
-    height: 162px;
+    min-height: 162px;
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -47,8 +46,61 @@
     font-family: 'Gotham Pro';
     max-width: 162px;
     margin-bottom: 10px;
-    height: 85px;
+    height: auto;
+    font-size: clamp(1vw, 1.8vw, 2vw);
 }
+
 .iconBlock_body_wrapper_icon_img{
     object-fit: contain;
+    width: 60%;
+}
+@media screen and (max-width:1280px){
+    .iconBlock_body{
+        width: 198px;
+        height: 245px;
+    }
+    .iconBlock_body_wrapper_icon{
+        width: 129px;
+        margin-top: 25px;
+        min-height: 129px;
+    }
+    .iconBlock_body_text{
+        font-size: clamp(1.4vw, 1.7vw, 2.1vw);
+    }
+}
+@media screen and (max-width:1024px){
+    .iconBlock_body{
+        width: 177px;
+        height: 218px;
+    }
+    .iconBlock_body_wrapper_icon{
+        width: 115px;
+        min-height: 115px;
+    }
+}
+@media screen and (max-width:768px){
+    .iconBlock_body{
+        width: 219px;
+        height: 270px;
+    }
+    .iconBlock_body_wrapper_icon{
+        width: 142px;
+        min-height: 142px;
+    }
+    .iconBlock_body_text{
+        font-size: clamp(1.4vw, 2.5vw, 3vw);
+    }
+}
+@media screen and (max-width:500px){
+    .iconBlock_body{
+        width: 159px;
+        height: 196px;
+    }
+    .iconBlock_body_wrapper_icon{
+        width: 104px;
+        min-height: 104px;
+    }
+    .iconBlock_body_text{
+        font-size: clamp(1.4vw, 3.5vw, 3.8vw);
+    }
 }

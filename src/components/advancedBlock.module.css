@@ -2,8 +2,8 @@
     display: flex;
     background-color: #fff;
     border-radius: 19px;
-    gap: 12px;
     width: 512px;
+    gap: 12px;
 }
 .advancedBlock_body_wrapper_column{
     display: flex;
@@ -81,5 +81,76 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+@media screen and (max-width:1280px){
+    .advancedBlock_body{
+        width: 408px;
+        gap: 12px;
+    }
+    .advancedBlock_body_wrapper_column_progress, .advancedBlock_body_wrapper_column_progress_filled{
+        height: 39px;
+        width: 308px;
+    }
+    .advancedBlock_body_wrapper_column_text{
+        font-size: 26px !important;
+        width: 95px;
+    }
+    .advancedBlock_body_wrapper_column_progress_filled_power_up{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:1024px){
+    .advancedBlock_body{
+        width: 364px;
+        gap: 10px;
+    }
+    .advancedBlock_body_wrapper_column_progress, .advancedBlock_body_wrapper_column_progress_filled{
+        height: 35px;
+        width: 239px;
+    }
+    .advancedBlock_body_wrapper_column_text{
+        font-size: 24px !important;
+        width: 90px;
+    }
+    .advancedBlock_body_wrapper_column_progress_filled_power_up{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:768px){
+    .advancedBlock_body{
+        width: 349px;
+        gap: 10px;
+    }
+    .advancedBlock_body_wrapper_column_progress, .advancedBlock_body_wrapper_column_progress_filled{
+        height: 33px;
+        width: 230px;
+    }
+    .advancedBlock_body_wrapper_column_text{
+        font-size: 24px !important;
+        width: 90px;
+    }
+    .advancedBlock_body_wrapper_column_progress_filled_power_up{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:500px){
+    .advancedBlock_body{
+        width: 220px;
+        gap: 10px;
+    }
+    .advancedBlock_body_wrapper_column_progress, .advancedBlock_body_wrapper_column_progress_filled{
+        height: 15px;
+        width: 118px;
+    }
+    .advancedBlock_body_wrapper_column{
+        gap: 0;
+    }
+    .advancedBlock_body_wrapper_column_text{
+        font-size: 18px !important;
+        width: 70px;
+    }
+    .advancedBlock_body_wrapper_column_progress_filled_power_up{
+        font-size: medium;
     }
 }

@@ -50,7 +50,7 @@ const MainBody = ({activeButton}) => {
                     </div>
                     <div className={styles.MainBody_wrapper_for_icon_block_column}>
                         <IconBlock onClick={() => handleIconClickAlt(4)} onActive={activeIconAlt === 4} src={image4} alt={'logo vscode'} linear='linear-gradient(135deg, rgba(19, 112, 175, 0.67) 0%, rgba(55, 166, 242, 0.58) 100%)' fontSizes='24px' text='IDE and source-code editors'/>
-                        <IconBlock onClick={() => handleIconClickAlt(5)} onActive={activeIconAlt === 5} src={image5} alt={'logo git'} linear='linear-gradient(135deg, rgba(255, 157, 108, 0.6) 0%, rgba(187, 78, 117, 0.8) 100%)' fontSizes='20px' text='Distributed version control system'/>
+                        <IconBlock onClick={() => handleIconClickAlt(5)} onActive={activeIconAlt === 5} src={image5} alt={'logo git'} linear='linear-gradient(135deg, rgba(255, 157, 108, 0.6) 0%, rgba(187, 78, 117, 0.8) 100%)' fontSizes='20px' text='Distributed version control'/>
                         <IconBlock onClick={() => handleIconClickAlt(6)} onActive={activeIconAlt === 6} src={image6} alt={'logo webpack'} linear='linear-gradient(135deg, #8ed6fb 0%, #1c78c0 100%)' fontSizes='30px' text='Module-bundlers'/>
                     </div>
                 </div>
@@ -63,39 +63,41 @@ const MainBody = ({activeButton}) => {
     }
     if (activeButton === 3){
         return <div style={{justifyContent:'space-around'}} className={styles.Main_menu_body}>
-            <div className={styles.Main_menu_text_wrapper_education}>
-                <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    2019-2023
-                </span>
-                <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    <b>University</b>
-                </span>
-                <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    Saratov State Technical University named after Y.A. Gagarin, Institute of Applied Information Technologies and Communications 
-                </span>
-            </div>
-            <div className={styles.Main_menu_text_wrapper_education}>
-                <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    2023-2025
-                </span>
-                <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                <b>University</b>
-                </span>
-                <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    Master's Degree in Applied Informatics
-                </span>
-            </div>
-            <div className={styles.Main_menu_text_wrapper_education}>
-                <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    2024-...
-                </span>
-                <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                <b>Courses</b>
-                </span>
-                <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
-                    code.mu free Course «JavaScript/Front-end»
-                </span>
-            </div>   
+                    <div className={styles.Main_menu_body_wrapper_mobile}>
+                        <div className={styles.Main_menu_text_wrapper_education}>
+                            <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                2019-2023
+                            </span>
+                            <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                <b>University</b>
+                            </span>
+                            <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                Saratov State Technical University named after Y.A. Gagarin, Institute of Applied Information Technologies and Communications 
+                            </span>
+                        </div>
+                        <div className={styles.Main_menu_text_wrapper_education}>
+                            <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                2023-2025
+                            </span>
+                            <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                            <b>University</b>
+                            </span>
+                            <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                Master's Degree in Applied Informatics
+                            </span>
+                        </div>
+                        <div className={styles.Main_menu_text_wrapper_education}>
+                            <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                2024-...
+                            </span>
+                            <span style={{fontWeight:'500', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                            <b>Courses</b>
+                            </span>
+                            <span style={{fontWeight:'400', fontSize:'24px'}} className={styles.Main_menu_text_wrapper_block}>
+                                code.mu free Course «JavaScript/Front-end»
+                            </span>
+                        </div> 
+                    </div>  
         </div>
     }
     if (activeButton === 4){

@@ -1,10 +1,20 @@
 import styles from "./header.module.css"; 
 import classNames from 'classnames';
 import Content from "./Content.js";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Portrait from "./Portrait..js";
 
-const Header = ({onAnchourClick}) => {
+const Header = ({onAnchourClick, activeMenu, onMenuClick}) => {
+	useEffect(() => {
+		if (activeMenu) {
+		  document.body.style.overflow = 'hidden';
+		} else {
+		  document.body.style.overflow = 'auto';
+		}
+		return () => {
+			document.body.style.overflow = 'auto';
+		  };
+		}, [activeMenu]);
 	const [activePhoto, setAtivePhoto] = useState(1);
 	function handlePointClick(pointID){
 		console.log(pointID);
@@ -13,7 +23,7 @@ const Header = ({onAnchourClick}) => {
 	return (
 	<>
 		<div className = {styles.Header}>
-			<div className={styles.Header_wrapper_for_position_content}>
+			<div className={styles.Header_wrapper_for_position_content} style={{backgroundColor: activeMenu ? 'black' : ''}}>
 				<div className = {styles.Header_menu}>
 					<span className = {styles.Header_logo}>EVGEN</span><span className = {classNames(styles.Header_logo_color, styles.Header_logo)}>OFF</span>
 					<ul className={styles.ul_Header}>
@@ -23,9 +33,22 @@ const Header = ({onAnchourClick}) => {
 						<li className={styles.Header_menu_navigation}><a onClick={(e) => { onAnchourClick(4);}} href='#Languages'>Languages</a></li>
 					</ul>
 				</div>
-				<div>
+				<div className={activeMenu ? styles.Header_wrapper_for_burger_media_menu_active : styles.Header_wrapper_for_burger_media_menu} onClick={() => onMenuClick()}>
+					<div className={activeMenu ? styles.Header_icon_active : styles.Header_icon}>
+						<span></span>
+					</div>
+				</div>
+				<div className={styles.Header_wrapper_stub}>
 					<div className ={styles.Header_stub_background}></div>
 				</div>
+			</div>
+			<div className={styles.Header_wrapper_mobile_menu} style={{display: activeMenu ? 'flex' : 'none'}}>
+				<ul className={styles.Header_wrapper_mobile_ul} style={{display: activeMenu ? 'block' : 'none'}}>
+					<li className={styles.Header_burger_menu_navigation}><a onClick={(e) => { onAnchourClick(1); onMenuClick()}} href="#Aboutme"> About-me</a></li>
+					<li className={styles.Header_burger_menu_navigation}><a onClick={(e) => { onAnchourClick(2); onMenuClick()}} href='#Hardskill'> Hard-skills</a></li>
+					<li className={styles.Header_burger_menu_navigation}><a onClick={(e) => { onAnchourClick(3); onMenuClick()}} href='#Education'> Education</a></li>
+					<li className={styles.Header_burger_menu_navigation}><a onClick={(e) => {  onAnchourClick(4); onMenuClick()}} href='#Education'> Languages</a></li>
+				</ul>
 			</div>
 			<div className ={styles.Header_showcase_body}>
 				<div className ={styles.Header_main_container}>

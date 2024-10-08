@@ -35,3 +35,24 @@
 .INactiveMenu{
     margin-top: 0px;
 }
+@media screen and (max-width:1280px){
+    .Content{
+        max-width: 1200px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .Conten{
+        max-width: 1024px;
+    }
+    .Content_menu_wrapper{
+        gap: 0px;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Content_menu_wrapper{
+        display: none;
+    }
+}
