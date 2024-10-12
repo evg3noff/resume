@@ -20,6 +20,15 @@ const Header = ({onAnchourClick, activeMenu, onMenuClick}) => {
 		console.log(pointID);
 		setAtivePhoto(pointID);
 	}
+	if (window.innerWidth < 768){
+		setTimeout(() => {
+			if (activePhoto == 1){
+				setAtivePhoto(2);
+			} else{
+				setAtivePhoto(1);
+			}
+		}, 5000);
+	}
 	return (
 	<>
 		<div className = {styles.Header}>

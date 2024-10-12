@@ -47,12 +47,17 @@
     max-width: 162px;
     margin-bottom: 10px;
     height: auto;
-    font-size: clamp(1vw, 1.8vw, 2vw);
+    font-size: clamp(1vw, 1.1vw, 2vw);
 }
 
 .iconBlock_body_wrapper_icon_img{
     object-fit: contain;
     width: 60%;
+}
+@media screen and (max-width:1600px){
+    .iconBlock_body_text{
+        font-size: clamp(1.4vw, 1.5vw, 2.1vw);
+    }
 }
 @media screen and (max-width:1280px){
     .iconBlock_body{

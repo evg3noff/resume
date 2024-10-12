@@ -11,7 +11,6 @@ import './components/reset.css';
 function App() {
   const [activeMenu, setActiveMenu] = useState(false);
 	function handleBurgerMenu(){
-			console.log(activeMenu);
 			setActiveMenu(!activeMenu);
 	}
   const [activeButton, switchActiveButton] = useState(null);
