@@ -18,4 +18,11 @@
 4. Запустите сайт на localhost (npm start)
 
 ## Screenshots
-![Скриншот приложения PC]()
+### NATIVE WIDTH
+![Скриншот приложения PC](resumePC.png)
+### 1280PX WIDTH
+![Скриншот приложения PC1280](resume1280.png)
+### 768PX WIDTH
+![Скриншот приложения 768](resume768.png)
+### MOBILE WIDTH
+![Скриншот приложения mobile](resume500.png)
