@@ -10,7 +10,7 @@ const Footer = () => {
                     <img style={{textDecoration: 'none'}} src={image} alt="github logo"></img>
                 </a>
             </div>
-            <span className={styles.footer_wrapper_block_text}><a className={styles.footer_wrapper_block_text} style={{textDecoration: 'none'}} href='https://github.com/dashboard'>GitHub</a></span>
+            <span className={styles.footer_wrapper_block_text}><a className={styles.footer_wrapper_block_text} style={{textDecoration: 'none'}} href='https://github.com/evg3noff'>GitHub</a></span>
         </div>
     </div>;
 };
