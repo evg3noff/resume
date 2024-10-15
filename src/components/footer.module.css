@@ -1,0 +1,56 @@
+.footer_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+}
+.footer_wrapper_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer_wrapper_block_icon{
+    border-radius: 55px;
+    width: 256px;
+    height: 256px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.footer_wrapper_block_text{
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
+    font-family: 'Gotham Pro';
+    cursor: pointer;
+}
+.footer_wrapper_block_text:hover{
+    color: #aaa9a9;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+img{
+    user-select: none;  
+}
+@media screen and (max-width:1280px){
+    .footer_wrapper_block_icon{
+        width: 199px;
+        height: 199px;
+    }
+    img{
+        width: 130px;
+    }
+}
+@media screen and (max-width:1024px){
+    .footer_wrapper_block_icon{
+        width: 182px;
+        height: 182px;
+    }
+    img{
+        width: 118px;
+    }
+}
