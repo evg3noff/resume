@@ -1,0 +1,535 @@
+.Header_logo{
+    font-size: 40px;
+    font-family: 'Gotham Pro';
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+}
+.Header_logo_color{
+    color: #FC6D26;
+}
+.Header{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    flex-direction: column;
+}
+.Header_wrapper_for_position_content{
+    transition: 0.3s;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.Header_menu{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 67px;
+    align-items: center;
+    margin-right: 45px;
+}
+.Header_wrapper_mobile_menu{
+    max-height: 800px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s;
+}
+@keyframes MoveMenu {
+    from{
+        transform: translate(100px, 0);
+        opacity: 0;
+    }
+    
+    to{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.Header_wrapper_mobile_ul{
+    background: #000000d8;
+    width: 70%;
+    height: 100%;
+    gap: 25px;
+    animation: MoveMenu 1.5s;
+    padding-top: 90px;
+}
+.Header_wrapper_for_burger_media_menu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.Header_wrapper_for_burger_media_menu_active{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 25px 0;
+}
+.Header_icon{
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    display: none;
+    position: absolute;
+}
+.Header_icon span{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0;
+    background-color: #000;
+    top: 50%;
+}
+.Header_icon::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    transition: 0.3s all ease 0s;
+    top: 0;
+    background-color: #000;
+}
+.Header_icon::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    transition: 0.3s all ease 0s;
+    top: 100%;
+    background-color: #000;
+}
+.Header_icon_active{
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    display: none;
+    position: absolute;
+    rotate: 90deg;
+}
+.Header_icon_active::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    transition: 0.3s all ease 0s;
+    top: 0;
+    left: 0;
+    background-color: #FC6D26;
+    transform: rotate(-45deg) translate(0px, 0px);
+}
+.Header_icon_active span{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #FC6D26;
+    top: 50%;
+    left: 0;
+    transform: scale(0);
+}
+.Header_icon_active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    transition: 0.3s all ease 0s;
+    background-color: #FC6D26;
+    transform: rotate(45deg) translate(0px, 0px);
+}
+.Header_menu_navigation{
+    color: white;
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+}
+.Header_burger_menu_navigation{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 8px;
+    user-select: none;
+}
+.ul_Header{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 42px;
+}
+.Header_top_showcase{
+    background-color: white;
+    height: 154px;
+    max-width: 540px;
+    width: 100%;
+    border-radius: 25px 55px 25px 25px;
+    margin-top: 49px;
+}
+
+.Header_showcase_body{
+    width: 100%;
+    border-radius: 0px 55px 55px 55px;
+    height: 883px;
+    background-color: white;
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+}
+.Header_wrapper_for_position_content{
+    display: flex;
+}
+.Header_wrapper_stub{
+    width: 100%;
+    display: contents;
+}
+.Header_stub_background{
+    background-color: white;
+    width: 100%;
+    max-width: 581px;
+    height: 154px;
+    border-radius: 25px 55px 0 0;
+    position: absolute;
+    z-index: -2;
+    margin-top: 49px;
+}
+.Header_showcase_title_content{
+    display: flex;
+    flex-direction: column;
+}
+.Header_showcase_title_mainText{
+    font-weight: 700;
+    font-size: 64px;
+    color: #000;
+    font-family: 'Gotham Pro';
+    margin-top: 137px;
+    margin-left: 81px;
+}
+.Header_showcase_title_subText{
+    font-weight: 400;
+    font-size: 64px;
+    letter-spacing: -0.05em;
+    color: #000;
+    font-family: 'Gotham Pro';
+    margin-left: 81px;
+    margin-top: 10px;
+}
+.Header_showcase_title_carousel_points{
+    gap: 38px;
+    display: flex;
+    margin-top: 144px;
+    margin-left: 156px;
+}
+.Header_showcase_title_carousel_point{
+    width: 31px;
+    height: 31px;
+    border: 1px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Header_showcase_title_carousel_point_active{
+    background-color: #000;
+    transition: 0.5s;
+}
+.Header_showcase_title_descriptionTxt{
+    max-width: 572px;
+    margin-top: 91px;
+    margin-left: 81px;
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.Header_showcase_title_descriptionTxt span:nth-child(odd){
+    position: relative;
+    font-weight: 400;
+    font-size: 19px;
+    color: #000;
+    font-family: 'Gotham Pro';
+    white-space: nowrap;
+}
+.Header_showcase_title_descriptionTxt span:nth-child(even){
+    position: relative;
+    font-weight: 400;
+    font-size: 19px;
+    color: #000;
+    font-family: 'Gotham Pro';
+
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+@keyframes textMoveRight {
+    from{
+      margin-left: -100%;
+    }
+    
+    to{
+        margin-left: 100%;
+    }
+}
+@keyframes textMoveLeft {
+    from{
+      margin-left: 700px;
+    }
+    
+    to{
+        margin-left: -500px;
+    }
+}
+.Header_main_container{
+    display: flex;
+}
+.Header_wrapper_for_info{
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 93px;
+    justify-content: space-around;
+}
+.Header_wrapper_for_info_component{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+.Header_wrapper_for_info_txt{
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Gotham Pro';
+}
+.Header_custom_url{
+    text-decoration: none;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #aaa9a9;
+}
+@media screen and (max-width:1280px){
+    .Header{
+        max-width: 1200px;
+    }
+    .Header_logo{
+        font-size: 32px;
+    }
+    .Header_menu_navigation{
+        font-size: 16px;
+    }
+    .Header_showcase_body{
+        margin-top: auto;
+        height: auto;
+    }
+    .Header_stub_background{
+        max-width: 472px;
+    }
+    .Header_showcase_title_mainText, .Header_showcase_title_subText{
+        font-size: 50px;
+    }
+    .Header_showcase_title_carousel_point{
+        width: 21px;
+        height: 21px;
+    }
+    .Header_showcase_title_carousel_points{
+        gap: 25px;
+    }
+    .Header_showcase_title_descriptionTxt{
+        margin-top: 50px;
+        max-width: 490px;
+    }
+    .Header_showcase_title_portrait{
+        width: 376px;
+        height: 562px;
+    }
+}
+@media screen and (max-width:1024px){
+    .Header{
+        max-width: 1024px;
+        background-color: white;
+    }
+    .Header_logo{
+        font-size: 32px;
+    }
+    .Header_menu_navigation{
+        font-size: 16px;
+    }
+    .Header_showcase_body{
+        margin-top: auto;
+        height: auto;
+    }
+    .Header_stub_background{
+        display: none;
+    }
+    .Header_showcase_title_mainText, .Header_showcase_title_subText{
+        margin-left: 0px;
+        font-size: 46px;
+        text-align: center;
+    }
+    .Header_showcase_title_mainText{
+        margin-top: 36px;
+    }
+    .Header_showcase_title_carousel_points{
+        display: none;
+    }
+    .Header_showcase_title_descriptionTxt{
+        display: none;
+    }
+    .Header_showcase_title_portrait{
+        width: 229px;
+        height: 342px;
+    }
+    .Header_main_container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Header_showcase_title_content:nth-child(2){
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Header_showcase_body{
+        border-radius: 0px;
+    }
+    .Header_menu{
+        margin-top: 0px;
+        padding: 40px;
+        justify-content: flex-start;
+        margin-right: auto;
+        border-radius: 0 25px 25px 25px;
+        background-color: #000;
+        width: 100%;
+    }
+    .ul_Header{
+        display: none;
+    }
+    .Header_wrapper_for_burger_media_menu{
+        display: flex;
+        background-color: white;
+        width: 15%;
+        cursor: pointer;
+    }
+    .Header_wrapper_for_burger_media_menu_active{
+        display: flex;
+        background-color: rgb(0, 0, 0);
+        width: 15%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .Header_wrapper_for_info_txt{
+        font-size: 24px;
+    }
+    .Header_icon{
+        display: block;
+    }
+    .Header_icon_active{
+        display: block;
+    }
+    .Header_wrapper_mobile_menu{
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width:768px){
+    .Header{
+        max-width: 768px;
+        background-color: white;
+    }
+    .Header_showcase_body{
+        margin-top: auto;
+        height: auto;
+    }
+    .Header_stub_background{
+        display: none;
+    }
+    .Header_showcase_title_mainText, .Header_showcase_title_subText{
+        margin-left: 0px;
+        font-size: 36px;
+        text-align: center;
+    }
+    .Header_showcase_title_mainText{
+        margin-top: 31px;
+    }
+    .Header_main_container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Header_showcase_title_content:nth-child(2){
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Header_showcase_body{
+        border-radius: 0px;
+    }
+    .Header_menu{
+        margin-top: 0px;
+        padding: 40px;
+        justify-content: flex-start;
+        margin-right: auto;
+        border-radius: 0 25px 25px 25px;
+        background-color: #000;
+        width: 100%;
+    }
+    .ul_Header{
+        display: none;
+    }
+    .Header_wrapper_for_burger_media_menu{
+        display: flex;
+        background-color: white;
+        width: 15%;
+        cursor: pointer;
+    }
+    .Header_wrapper_for_burger_media_menu_active{
+        display: flex;
+        background-color: rgb(0, 0, 0);
+        width: 15%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .Header_wrapper_for_info_txt{
+        font-size: 18px;
+    }
+    .Header_wrapper_mobile_menu{
+        width: 100%;
+        height: 40%;
+    }
+}
+@media screen and (max-width:500px){
+    .Header{
+        background-color: white;
+    }
+    .Header_logo{
+        font-size: 20px;
+    }
+    .Header_menu{
+        padding: 17px;
+    }
+    .Header_showcase_title_mainText, .Header_showcase_title_subText{
+        margin-left: 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .Header_wrapper_mobile_menu{
+        height: 117%;
+    }
+    .Header_wrapper_for_info{
+        margin-top: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Header_wrapper_for_info_component{
+        justify-content: center;
+    }
+}

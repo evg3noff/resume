@@ -1,0 +1,58 @@
+.Content{
+    display: flex;
+    height: auto;
+    width: 100%;
+    max-width: 1440px;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: space-between;
+}
+.Content_menu_wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    gap: 34px;
+    margin-left: 37px;
+}
+.Content_menu_option{
+    border-radius: 19px;
+    width: 318px;
+    height: 87px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 40px;
+    color: #131313;
+    font-family: 'Gotham Pro';
+}
+.Content_menu_option_activeMenu{
+    margin-top: -49px;
+    display: none;
+}
+.INactiveMenu{
+    margin-top: 0px;
+}
+@media screen and (max-width:1280px){
+    .Content{
+        max-width: 1200px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .Conten{
+        max-width: 1024px;
+    }
+    .Content_menu_wrapper{
+        gap: 0px;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Content_menu_wrapper{
+        display: none;
+    }
+}
